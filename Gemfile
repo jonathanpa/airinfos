@@ -5,8 +5,16 @@ gem 'rails', '3.2.6'
 # Bundle edge Rails instead:
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
 
-gem 'sqlite3'
+gem 'execjs', '1.4.0'
+gem 'therubyracer', '0.10.1'
+gem 'jquery-rails', '2.0.2'
 
+gem 'roo', '1.10.1'
+
+group :development, :test do
+  gem 'sqlite3', '1.3.6'
+  gem 'rspec-rails', '2.10.1'
+end
 
 # Gems used only for assets and not required
 # in production environments by default.
@@ -20,7 +28,11 @@ group :assets do
   gem 'uglifier', '>= 1.0.3'
 end
 
-gem 'jquery-rails'
+group :test do
+  gem 'shoulda-matchers', '1.2.0'
+  gem 'factory_girl_rails', '3.5.0'
+end
+
 
 # To use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.0.0'
