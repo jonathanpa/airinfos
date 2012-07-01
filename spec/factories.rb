@@ -1,6 +1,7 @@
 FactoryGirl.define do
   factory :city do
     sequence(:name) { |n| "City #{n}" }
+    code            { name.delete(' ').downcase }
   end
 
   factory :measure do
