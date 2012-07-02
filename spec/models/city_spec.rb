@@ -6,9 +6,11 @@ describe City do
 
   subject { @city }
 
+  it { should.respond_to?(:code) }
   it { should.respond_to?(:name) }
+  it { should validate_presence_of(:code) }
   it { should validate_presence_of(:name) }
-  it { should validate_uniqueness_of(:name) }
+  it { should validate_uniqueness_of(:name).scoped_to(:code) }
 
   it { should have_many(:measures) }
 
