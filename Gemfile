@@ -11,6 +11,7 @@ gem 'jquery-rails', '2.0.2'
 
 gem 'roo', '1.10.1'
 gem 'resque', '1.20.0', require: 'resque/server'
+gem 'resque-scheduler', '2.0.0', require: 'resque_scheduler'
 
 group :development, :test do
   gem 'sqlite3', '1.3.6'
