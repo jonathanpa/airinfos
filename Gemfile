@@ -10,6 +10,7 @@ gem 'therubyracer', '0.10.1'
 gem 'jquery-rails', '2.0.2'
 
 gem 'roo', '1.10.1'
+gem 'resque', '1.20.0', require: 'resque/server'
 
 group :development, :test do
   gem 'sqlite3', '1.3.6'

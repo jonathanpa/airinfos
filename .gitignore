@@ -16,3 +16,7 @@
 .rvmrc
 *.swp
 .rspec
+
+#Auth files
+config/initializers/resque_auth.rb
+
