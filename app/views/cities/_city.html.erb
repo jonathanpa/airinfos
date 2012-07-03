@@ -1,12 +1,13 @@
 <% last_measure = city.measures.last %>
+<% pm25 = last_measure.pm25 %>
 <div class="row">
   <div class="span8 offset2 city">
     <div class="row">
-      <div class="span6">
+      <div class="span5">
         <h3><%= city.name %></h3>
       </div>
-      <div class="span2">
-        <span class="label-large label-success">Good</span>
+      <div class="span3">
+        <span class="label-large label-<%= level_class(pm25) %>"><%= level_message(pm25) %></span>
       </div>
     </div>
     <div class="row">
@@ -14,7 +15,7 @@
         <span class="date"><%= last_measure.date.to_formatted_s(:short) %></span>
       </div>
       <div class="span2">
-        <span class="pm25"><%= last_measure.pm25.to_s %></span> <span class="unit">µg.m-3</span>
+        <span class="pm25"><%= pm25.to_s %></span> <span class="unit">µg.m-3</span>
       </div>
     </div>
   </div>
