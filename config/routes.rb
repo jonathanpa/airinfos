@@ -1,5 +1,6 @@
 Airinfos::Application.routes.draw do
   mount Resque::Server, at: '/resque'
+  root to: 'pages#home'
 
   # The priority is based upon order of creation:
   # first created -> highest priority.
