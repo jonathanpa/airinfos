@@ -13,6 +13,10 @@ gem 'roo', '1.10.1'
 gem 'resque', '1.20.0', require: 'resque/server'
 gem 'resque-scheduler', '2.0.0', require: 'resque_scheduler'
 
+gem 'bootstrap-sass', '2.0.4.0'
+gem 'will_paginate', '3.0.3'
+gem 'bootstrap-will_paginate', '0.0.7'
+
 group :development, :test do
   gem 'sqlite3', '1.3.6'
   gem 'rspec-rails', '2.10.1'
