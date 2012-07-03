@@ -3,6 +3,26 @@
 $grayMediumLight: #eaeaea;
 $redRails: #ae252b;
 
+@mixin box_sizing {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+@mixin a_gray {
+  color: $gray;
+
+  &:hover {
+    color: $grayDarker;
+  }
+}
+
+@mixin gray_italic {
+  font-style: italic;
+  color: $grayLight;
+}
+
+
 /* universal */
 
 body {
@@ -75,7 +95,11 @@ footer {
   padding-right: 10px;
   border-top: 1px solid $grayMediumLight;
   color: $grayLight;
-  
+
+  a {
+    @include a_gray;
+  }
+
   small {
     float: left;
   }
@@ -93,9 +117,40 @@ footer {
 
 /* miscellaneous */
 
-.redRails
-{
+.redRails {
   color: $redRails;
   font-weight: bolder;
 }
 
+.date {
+  @include gray_italic;
+}
+
+.unit {
+  @include gray_italic;
+}
+
+.pm25 {
+  font-weight: bold;
+  font-size: 1.7em;
+}
+
+.label-large {
+  @extend .label;
+  font-size: 1.1em;
+}
+
+.city {
+  background-color: $grayMediumLight;
+  min-height: 50px;;
+  margin-bottom: 20px;
+  padding: 10px;
+
+  .row {
+    margin-bottom: 10px;
+  }
+
+  .span2 {
+    text-align: right;
+  }
+}
