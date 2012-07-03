@@ -1,0 +1,11 @@
+do_my_job:
+  every: 500s
+  class: MyJob
+  args:
+  description: Runs the perform method in MyJob.
+
+pm25_importer:
+  cron: "15 * * * *"
+  class: Pm25Importer
+  args:
+  description: Import the PM2.5 concentrations from PDL cities.

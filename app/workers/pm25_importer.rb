@@ -18,6 +18,9 @@ class Pm25Importer
     mapping.each do |code, columns|
       import_data_from_city(code, time_measure, pdl_measures, columns)
     end
+
+    #TODO: To remove
+    display_measures(mapping.keys)
   end
 
   private
@@ -41,7 +44,7 @@ class Pm25Importer
 
   def self.display_measures(city_codes)
     city_codes.each do |code|
-      measure = City.find_by_code(code.to_s).measures.first
+      measure = City.find_by_code(code.to_s).measures.last
       puts "#{code}\t#{measure.inspect}"
     end
   end
