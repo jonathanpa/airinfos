@@ -5,8 +5,6 @@ gem 'rails', '3.2.6'
 # Bundle edge Rails instead:
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
 
-gem 'execjs', '1.4.0'
-gem 'therubyracer', '0.10.1'
 gem 'jquery-rails', '2.0.2'
 
 gem 'roo', '1.10.1'
@@ -29,7 +27,7 @@ group :assets do
   gem 'coffee-rails', '~> 3.2.1'
 
   # See https://github.com/sstephenson/execjs#readme for more supported runtimes
-  # gem 'therubyracer', :platforms => :ruby
+  gem 'therubyracer', :platforms => :ruby
 
   gem 'uglifier', '>= 1.0.3'
 end
@@ -37,6 +35,10 @@ end
 group :test do
   gem 'shoulda-matchers', '1.2.0'
   gem 'factory_girl_rails', '3.5.0'
+end
+
+group :production do
+  gem 'pg', '0.12.2'
 end
 
 
