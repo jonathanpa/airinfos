@@ -1,9 +1,3 @@
-do_my_job:
-  every: 500s
-  class: MyJob
-  args:
-  description: Runs the perform method in MyJob.
-
 pm25_importer:
   cron: "15 * * * *"
   class: Pm25Importer
