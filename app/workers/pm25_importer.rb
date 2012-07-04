@@ -4,7 +4,7 @@ class Pm25Importer
   def self.perform
     mapping = { angers: [2], lemans: [3], nantes: [4, 5], saintnazaire: [6] }
     
-    now = DateTime.now
+    now = DateTime.now.in_time_zone('Paris')
     time_measure = DateTime.civil(now.year, now.month, now.day, now.hour)
     yesterday = time_measure - 1.day
 
