@@ -3,3 +3,9 @@ pm25_importer:
   class: Pm25Importer
   args:
   description: Import the PM2.5 concentrations from PDL cities.
+
+test_job:
+  every: 30s
+  class: TestJob
+  args:
+  description: Import the PM2.5 concentrations from PDL cities.
