@@ -15,6 +15,10 @@ gem 'bootstrap-sass', '2.0.4.0'
 gem 'will_paginate', '3.0.3'
 gem 'bootstrap-will_paginate', '0.0.7'
 
+group :development do
+  gem 'foreman', '0.47.0'
+end
+
 group :development, :test do
   gem 'sqlite3', '1.3.6'
   gem 'rspec-rails', '2.10.1'
