@@ -19,6 +19,5 @@
 
 .sass-cache
 
-#Auth files
-#config/initializers/resque_auth.rb
+.env
 
