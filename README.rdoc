@@ -1,10 +1,15 @@
 == Introduction
 Airinfos is a small web-application gathering the PM2.5 pollution level. The results are retrieved from airpl.org every hour.
 
+== Requirements
+You need to be able to reach a Redis instance (http://redis.io/).
+
 == How to start
 1. Do a <tt>bundle install</tt>
-2. Then a <tt>foreman start</tt> that will start the <tt>resque-scheduler</tt> and <tt>resque</tt> workers.
-3. To automate a little more, you can add into the <tt>Procfile</tt> a line to start your web server.
+2. Then a <tt>foreman start</tt> that will start the <tt>resque-scheduler</tt>, <tt>resque</tt> workers and your webserver.
+
+== Visit
+The application is visible online at http://airinfos.herokuapp.com.
 
 == To do
 * PM2.5 average during the hour rather than the instantaneous concentration at time t.
