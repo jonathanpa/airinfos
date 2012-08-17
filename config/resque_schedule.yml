@@ -1,5 +1,5 @@
 pm25_importer:
-  cron: "15 * * * *"
+  cron: "20 * * * *"
   class: Pm25Importer
   args:
   description: Import the PM2.5 concentrations from PDL cities.

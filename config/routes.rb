@@ -1,5 +1,8 @@
 Airinfos::Application.routes.draw do
-  mount Resque::Server, at: '/resque'
+  if Rails.env == 'development'
+    mount Resque::Server, at: '/resque'
+  end
+
   root to: 'pages#home'
 
   # The priority is based upon order of creation:
