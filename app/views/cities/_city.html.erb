@@ -15,7 +15,7 @@
         <span class="date"><%= last_measure.date.to_formatted_s(:short) %></span>
       </div>
       <div class="span2">
-        <span class="pm25"><%= pm25.to_s %></span> <span class="unit">µg.m-3</span>
+        <span class="pm25"><%= format_pm25(pm25) %></span> <span class="unit">µg.m-3</span>
       </div>
     </div>
   </div>
