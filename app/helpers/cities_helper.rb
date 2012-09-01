@@ -23,4 +23,12 @@ module CitiesHelper
     end
   end
 
+  def format_pm25(pm25)
+    if pm25 == 0
+      'N/A'
+    else
+      pm25
+    end
+  end
+
 end
