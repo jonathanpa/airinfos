@@ -24,3 +24,5 @@ Procfile
 
 .rake_tasks~
 tags
+
+.dotcloud
