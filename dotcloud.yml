@@ -1,5 +1,8 @@
 www:
-  ruby
+  type: ruby
+  exclude_bundler_groups:
+    - development
+    - test
 data:
-  mysql
+  type: mysql
 
