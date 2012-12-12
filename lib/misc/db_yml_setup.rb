@@ -10,7 +10,7 @@ RECONNECT = false
 POOL      = 5
 
 def load_env
-  YAML.load_file('tmp/environment_test.yml')
+  YAML.load_file('/home/dotcloud/environment.yml')
 end
 
 def write_database_cfg_file
@@ -30,7 +30,7 @@ def write_database_cfg_file
     }
   }
 
-  File.open('config/database_test.yml', 'w') do |file|
+  File.open('/home/dotcloud/current/config/database.yml', 'w') do |file|
     file.write(db_cfg.to_yaml)
   end
 end
