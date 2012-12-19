@@ -19,8 +19,9 @@ class Pm25Importer
       import_data_from_city(code, time_measure, pdl_measures, columns)
     end
 
-    #TODO: To remove
-    display_measures(mapping.keys)
+    if Rails.env.development?
+      display_measures(mapping.keys)
+    end
   end
 
   private
