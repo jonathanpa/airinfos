@@ -21,6 +21,7 @@ group :development, :test do
   gem 'sqlite3', '1.3.6'
   gem 'rspec-rails', '2.10.1'
   gem 'pry-rails', '0.2.1'
+  gem 'pry-nav', '0.2.2'
 end
 
 # Gems used only for assets and not required
