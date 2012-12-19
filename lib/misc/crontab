@@ -1,0 +1,2 @@
+20 * * * * bundle exec rake data:import_pdl
+

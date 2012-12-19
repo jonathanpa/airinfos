@@ -1,1 +1,10 @@
-lib/misc/db_yml_setup.rb
+#!/usr/bin/env ruby
+# encoding: utf-8
+
+system('bundle exec rake dotcloud:setup_db_yml')
+system('bundle exec rake db:create')
+system('bundle exec rake db:migrate')
+system('bundle exec rake assets:clean')
+system('bundle exec rake assets:precompile')
+
+system('crontab ~/current/lib/misc/crontab')
