@@ -3,6 +3,7 @@ www:
   exclude_bundler_groups:
     - development
     - test
+  postbuild: ./postbuild
 data:
   type: mysql
 
