@@ -21,6 +21,7 @@ group :development, :test do
   gem 'sqlite3', '1.3.6'
   gem 'rspec-rails', '2.10.1'
   gem 'pry-rails', '0.2.1'
+  gem 'pry-nav', '0.2.2'
 end
 
 # Gems used only for assets and not required
@@ -29,6 +30,7 @@ group :assets do
   gem 'sass-rails',   '~> 3.2.3'
   gem 'coffee-rails', '~> 3.2.1'
 
+  gem 'execjs'
   gem 'therubyracer'
   gem 'libv8', '~> 3.11.8'
 
@@ -41,7 +43,7 @@ group :test do
 end
 
 group :production do
-  gem 'pg', '0.12.2'
+  gem 'mysql2', '0.3.11'
 end
 
 
