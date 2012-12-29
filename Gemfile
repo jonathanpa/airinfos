@@ -8,8 +8,6 @@ gem 'rails', '3.2.6'
 gem 'jquery-rails', '2.0.2'
 
 gem 'roo', '1.10.1'
-gem 'resque', '1.20.0', require: 'resque/server'
-gem 'resque-scheduler', '2.0.0', require: 'resque_scheduler'
 
 gem 'bootstrap-sass', '2.0.4.0'
 gem 'will_paginate', '3.0.3'
@@ -23,6 +21,7 @@ group :development, :test do
   gem 'sqlite3', '1.3.6'
   gem 'rspec-rails', '2.10.1'
   gem 'pry-rails', '0.2.1'
+  gem 'pry-nav', '0.2.2'
 end
 
 # Gems used only for assets and not required
@@ -31,8 +30,9 @@ group :assets do
   gem 'sass-rails',   '~> 3.2.3'
   gem 'coffee-rails', '~> 3.2.1'
 
-  # See https://github.com/sstephenson/execjs#readme for more supported runtimes
-  gem 'therubyracer', :platforms => :ruby
+  gem 'execjs'
+  gem 'therubyracer'
+  gem 'libv8', '~> 3.11.8'
 
   gem 'uglifier', '>= 1.0.3'
 end
@@ -43,7 +43,7 @@ group :test do
 end
 
 group :production do
-  gem 'pg', '0.12.2'
+  gem 'mysql2', '0.3.11'
 end
 
 
