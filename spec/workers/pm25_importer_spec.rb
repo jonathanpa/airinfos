@@ -1,5 +1,4 @@
 require 'spec_helper'
-require 'rake'
 
 describe Pm25Importer do
   let(:my_date) { DateTime.civil(2012, 12, 30, 21).
@@ -9,13 +8,7 @@ describe Pm25Importer do
   let!(:my_xls_source_missing) { Excel.new('spec/fixtures/measures_missing.xls') }
   let!(:my_xls_source_missing_all) { Excel.new('spec/fixtures/measures_missing_all.xls') }
 
-  before do
-    Rake::Task.clear
-    Airinfos::Application.load_tasks
-    Rake::Task['db:generate_cities_pdl'].invoke
-
-    DateTime.stub(:now).and_return(my_date)
-  end
+  before { DateTime.stub(:now).and_return(my_date) }
 
   context 'with all data measures present in xls' do
     before do
