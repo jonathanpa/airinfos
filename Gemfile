@@ -1,6 +1,6 @@
 source 'https://rubygems.org'
 
-gem 'rails', '3.2.6'
+gem 'rails', '~>3.2'
 
 # Bundle edge Rails instead:
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
@@ -43,7 +43,7 @@ group :test do
 end
 
 group :production do
-  gem 'mysql2', '0.3.11'
+  gem 'pg', '0.14.1'
 end
 
 
