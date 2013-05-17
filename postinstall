@@ -1,9 +1,0 @@
-#!/bin/bash
-
-cd ~/current
-
-bundle exec rake dotcloud:setup_db_yml
-bundle exec rake db:create
-bundle exec rake db:migrate
-
-crontab ~/current/lib/misc/crontab

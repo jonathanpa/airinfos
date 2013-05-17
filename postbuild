@@ -1,4 +1,0 @@
-#!/bin/bash
-
-cd ~/current
-bundle exec rake assets:precompile
