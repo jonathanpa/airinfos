@@ -7,8 +7,8 @@ describe Measure do
 
   subject { @measure }
 
-  it { should.respond_to?(:date) }
-  it { should.respond_to?(:pm25) }
+  it { should respond_to(:date) }
+  it { should respond_to(:pm25) }
 
   it { should validate_presence_of(:date) }
 
