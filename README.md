@@ -5,6 +5,7 @@ Airinfos is a small web-application gathering the PM2.5 pollution level. The res
 The application is visible online at (http://airinfos.herokuapp.com/).
 
 # To do
+* **Rewrite it !** old code written almost 2 years ago. A simple Sinatra app would be lighter.
 * Twitter integration.
 * PM2.5 stats.
 * Add more cities.
