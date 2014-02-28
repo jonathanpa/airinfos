@@ -8,6 +8,14 @@ describe Pm25Importer do
   let!(:my_xls_source_missing) { Excel.new('spec/fixtures/measures_missing.xls') }
   let!(:my_xls_source_missing_all) { Excel.new('spec/fixtures/measures_missing_all.xls') }
 
+  before(:all) do
+    cities = { angers: "Angers", lemans: "Le Mans", nantes: "Nantes", saintnazaire: "Saint-Nazaire" }
+
+    cities.each do |key, cityname|
+      City.first_or_create!( { code: key.to_s, name: cityname } )
+    end
+  end
+
   before { DateTime.stub(:now).and_return(my_date) }
 
   context 'with all data measures present in xls' do
